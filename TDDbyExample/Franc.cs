@@ -4,8 +4,6 @@ namespace TDDbyExample
 {
     public class Franc : Money, IEquatable<Franc>
     {
-        int amount;
-
         public Franc(int amount)
         {
             this.amount = amount;
