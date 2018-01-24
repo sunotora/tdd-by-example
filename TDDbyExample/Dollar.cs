@@ -13,8 +13,7 @@ namespace TDDbyExample
 
         public Dollar Times(int multiplier)
         {
-            Amount *= multiplier;
-            return null;
+            return new Dollar(Amount * multiplier);
         }
     }
 }
