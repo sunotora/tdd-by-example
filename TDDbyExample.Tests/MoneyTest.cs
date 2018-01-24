@@ -14,8 +14,8 @@ namespace TDDbyExample.Tests
         public void 掛け算できる()
         {
             var five = Money.Dollar(5);
-            Assert.That(five.Times(2), Is.EqualTo(new Dollar(10)));
-            Assert.That(five.Times(3), Is.EqualTo(new Dollar(15)));
+            Assert.That(five.Times(2), Is.EqualTo(Money.Dollar(10)));
+            Assert.That(five.Times(3), Is.EqualTo(Money.Dollar(15)));
         }
 
         [Test]
@@ -31,11 +31,11 @@ namespace TDDbyExample.Tests
         {
             Assert.Multiple(() =>
             {
-                Assert.True(new Dollar(5).Equals(new Dollar(5)));
-                Assert.False(new Dollar(5).Equals(new Dollar(6)));
+                Assert.True(Money.Dollar(5).Equals(Money.Dollar(5)));
+                Assert.False(Money.Dollar(5).Equals(Money.Dollar(6)));
                 Assert.True(new Franc(5).Equals(new Franc(5)));
                 Assert.False(new Franc(5).Equals(new Franc(6)));
-                Assert.False(new Franc(5).Equals(new Dollar(5)));
+                Assert.False(new Franc(5).Equals(Money.Dollar(5)));
             });
         }
     }
