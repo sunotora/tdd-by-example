@@ -8,7 +8,8 @@ namespace TDDbyExample
         public override bool Equals(object obj)
         {
             var money = (Money)obj;
-            return amount == money.amount;
+            return GetType() == money.GetType()
+                && amount == money.amount;
         }
     }
 }
