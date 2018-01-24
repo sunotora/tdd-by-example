@@ -14,8 +14,11 @@ namespace TDDbyExample.Tests
         public void 掛け算できる()
         {
             var five = new Dollar(5);
-            five.Times(2);
-            Assert.That(five.Amount, Is.EqualTo(10));
+            var product = five.Times(2);
+            Assert.That(product.Amount, Is.EqualTo(10));
+
+            product = five.Times(3);
+            Assert.That(product.Amount, Is.EqualTo(15));
         }
     }
 }
