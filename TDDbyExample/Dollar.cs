@@ -18,7 +18,7 @@ namespace TDDbyExample
 
         public bool Equals(Dollar other)
         {
-            return true;
+            return Amount == other.Amount;
         }
     }
 }
