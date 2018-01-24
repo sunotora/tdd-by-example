@@ -4,21 +4,21 @@ namespace TDDbyExample
 {
     public class Dollar : IEquatable<Dollar>
     {
-        public int Amount { get; private set; }
+        int amount;
 
         public Dollar(int amount)
         {
-            Amount = amount;
+            this.amount = amount;
         }
 
         public Dollar Times(int multiplier)
         {
-            return new Dollar(Amount * multiplier);
+            return new Dollar(amount * multiplier);
         }
 
         public bool Equals(Dollar other)
         {
-            return Amount == other.Amount;
+            return amount == other.amount;
         }
     }
 }
