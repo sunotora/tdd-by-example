@@ -13,7 +13,7 @@ namespace TDDbyExample.Tests
         [Test]
         public void 掛け算できる()
         {
-            var five = new Dollar(5);
+            var five = Money.Dollar(5);
             Assert.That(five.Times(2), Is.EqualTo(new Dollar(10)));
             Assert.That(five.Times(3), Is.EqualTo(new Dollar(15)));
         }

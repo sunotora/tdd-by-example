@@ -11,5 +11,10 @@ namespace TDDbyExample
             return GetType() == money.GetType()
                 && amount == money.amount;
         }
+
+        public static Money Dollar(int amount)
+        {
+            return new Dollar(amount);
+        }
     }
 }
