@@ -2,7 +2,7 @@
 
 namespace TDDbyExample
 {
-    public class Franc : IEquatable<Franc>
+    public class Franc : Money, IEquatable<Franc>
     {
         int amount;
 
