@@ -2,12 +2,13 @@
 
 namespace TDDbyExample
 {
-    public class Money : IEquatable<Money>
+    public class Money
     {
         protected int amount;
-        public bool Equals(Money other)
+        public override bool Equals(object obj)
         {
-            return amount == other.amount;
+            var money = (Money)obj;
+            return amount == money.amount;
         }
     }
 }
