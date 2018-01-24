@@ -19,6 +19,14 @@ namespace TDDbyExample.Tests
         }
 
         [Test]
+        public void Francも掛け算できる()
+        {
+            var five = new Franc(5);
+            Assert.That(five.Times(2), Is.EqualTo(new Franc(10)));
+            Assert.That(five.Times(3), Is.EqualTo(new Franc(15)));
+        }
+
+        [Test]
         public void 比較できる()
         {
             Assert.Multiple(() =>
