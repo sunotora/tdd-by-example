@@ -21,9 +21,9 @@ namespace TDDbyExample.Tests
         [Test]
         public void Francも掛け算できる()
         {
-            var five = new Franc(5);
-            Assert.That(five.Times(2), Is.EqualTo(new Franc(10)));
-            Assert.That(five.Times(3), Is.EqualTo(new Franc(15)));
+            var five = Money.Franc(5);
+            Assert.That(five.Times(2), Is.EqualTo(Money.Franc(10)));
+            Assert.That(five.Times(3), Is.EqualTo(Money.Franc(15)));
         }
 
         [Test]
@@ -33,9 +33,9 @@ namespace TDDbyExample.Tests
             {
                 Assert.True(Money.Dollar(5).Equals(Money.Dollar(5)));
                 Assert.False(Money.Dollar(5).Equals(Money.Dollar(6)));
-                Assert.True(new Franc(5).Equals(new Franc(5)));
-                Assert.False(new Franc(5).Equals(new Franc(6)));
-                Assert.False(new Franc(5).Equals(Money.Dollar(5)));
+                Assert.True(Money.Franc(5).Equals(Money.Franc(5)));
+                Assert.False(Money.Franc(5).Equals(Money.Franc(6)));
+                Assert.False(Money.Franc(5).Equals(Money.Dollar(5)));
             });
         }
     }
