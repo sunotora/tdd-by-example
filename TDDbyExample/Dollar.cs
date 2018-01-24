@@ -2,7 +2,7 @@
 
 namespace TDDbyExample
 {
-    public class Dollar : Money, IEquatable<Dollar>
+    public class Dollar : Money
     {
         public Dollar(int amount)
         {
@@ -12,11 +12,6 @@ namespace TDDbyExample
         public Dollar Times(int multiplier)
         {
             return new Dollar(amount * multiplier);
-        }
-
-        public bool Equals(Dollar other)
-        {
-            return amount == other.amount;
         }
     }
 }
