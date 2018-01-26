@@ -17,7 +17,7 @@ namespace TDDbyExample
 
         public virtual Money Times(int multiplier)
         {
-            return null;
+            return new Money(amount * multiplier, currency);
         }
 
         public override bool Equals(object obj)
