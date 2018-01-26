@@ -23,7 +23,7 @@ namespace TDDbyExample
         public override bool Equals(object obj)
         {
             var money = (Money)obj;
-            return GetType() == money.GetType()
+            return Currency == money.Currency
                 && amount == money.amount;
         }
 
