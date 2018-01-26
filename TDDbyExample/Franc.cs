@@ -4,10 +4,10 @@ namespace TDDbyExample
 {
     public class Franc : Money
     {
-        public Franc(int amount)
+        public Franc(int amount, string currency)
         {
             this.amount = amount;
-            currency = "CHF";
+            this.currency = "CHF";
         }
 
         public override Money Times(int multiplier)
