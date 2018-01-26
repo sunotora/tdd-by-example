@@ -7,6 +7,12 @@ namespace TDDbyExample
         protected int amount;
         protected string currency;
 
+        public Money (int amount, string currency)
+        {
+            this.amount = amount;
+            this.currency = currency;
+        }
+
         public string Currency => currency;
 
         public abstract Money Times(int multiplier);
