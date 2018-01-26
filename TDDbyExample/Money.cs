@@ -15,7 +15,10 @@ namespace TDDbyExample
 
         public string Currency => currency;
 
-        public abstract Money Times(int multiplier);
+        public Money Times(int multiplier)
+        {
+            return null;
+        }
 
         public override bool Equals(object obj)
         {
