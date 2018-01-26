@@ -15,7 +15,7 @@ namespace TDDbyExample
 
         public string Currency => currency;
 
-        public Money Times(int multiplier)
+        public virtual Money Times(int multiplier)
         {
             return null;
         }
