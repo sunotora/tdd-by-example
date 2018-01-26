@@ -6,6 +6,8 @@ namespace TDDbyExample
     {
         protected int amount;
 
+        public abstract string Currency { get; }
+
         public abstract Money Times(int multiplier);
 
         public override bool Equals(object obj)

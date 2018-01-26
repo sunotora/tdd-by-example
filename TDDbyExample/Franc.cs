@@ -9,6 +9,8 @@ namespace TDDbyExample
             this.amount = amount;
         }
 
+        public override string Currency => "CHF";
+
         public override Money Times(int multiplier)
         {
             return new Franc(amount * multiplier);

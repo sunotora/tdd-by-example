@@ -38,5 +38,12 @@ namespace TDDbyExample.Tests
                 Assert.False(Money.Franc(5).Equals(Money.Dollar(5)));
             });
         }
+
+        [Test]
+        public void 通貨を取得できる()
+        {
+            Assert.That(Money.Dollar(1).Currency, Is.EqualTo("USD"));
+            Assert.That(Money.Franc(1).Currency, Is.EqualTo("CHF"));
+        }
     }
 }
