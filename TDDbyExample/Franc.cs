@@ -8,7 +8,7 @@ namespace TDDbyExample
 
         public override Money Times(int multiplier)
         {
-            return new Franc(amount * multiplier, currency);
+            return new Money(amount * multiplier, currency);
         }
     }
 }
