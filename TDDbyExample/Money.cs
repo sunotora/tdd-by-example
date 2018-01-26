@@ -2,7 +2,7 @@
 
 namespace TDDbyExample
 {
-    public abstract class Money
+    public class Money
     {
         protected int amount;
         protected string currency;
