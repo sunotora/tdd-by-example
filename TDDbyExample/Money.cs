@@ -5,8 +5,9 @@ namespace TDDbyExample
     public abstract class Money
     {
         protected int amount;
+        protected string currency;
 
-        public abstract string Currency { get; }
+        public string Currency => currency;
 
         public abstract Money Times(int multiplier);
 
