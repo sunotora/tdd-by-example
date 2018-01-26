@@ -2,7 +2,7 @@
 
 namespace TDDbyExample
 {
-    public abstract class Money
+    public class Money
     {
         protected int amount;
         protected string currency;
@@ -15,7 +15,10 @@ namespace TDDbyExample
 
         public string Currency => currency;
 
-        public abstract Money Times(int multiplier);
+        public virtual Money Times(int multiplier)
+        {
+            return null;
+        }
 
         public override bool Equals(object obj)
         {
