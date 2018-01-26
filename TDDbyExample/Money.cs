@@ -36,5 +36,10 @@ namespace TDDbyExample
         {
             return new Franc(amount, "CHF");
         }
+
+        public override string ToString()
+        {
+            return $"Money(Amount={amount}, Curreency={currency})";
+        }
     }
 }
