@@ -12,7 +12,7 @@ namespace TDDbyExample
 
         public override Money Times(int multiplier)
         {
-            return new Franc(amount * multiplier, null);
+            return Money.Franc(amount * multiplier);
         }
     }
 }
