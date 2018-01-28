@@ -19,14 +19,6 @@ namespace TDDbyExample.Tests
         }
 
         [Test]
-        public void Francも掛け算できる()
-        {
-            var five = Money.Franc(5);
-            Assert.That(five.Times(2), Is.EqualTo(Money.Franc(10)));
-            Assert.That(five.Times(3), Is.EqualTo(Money.Franc(15)));
-        }
-
-        [Test]
         public void 比較できる()
         {
             Assert.Multiple(() =>
