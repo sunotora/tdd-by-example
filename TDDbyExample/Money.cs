@@ -20,6 +20,11 @@ namespace TDDbyExample
             return new Money(amount * multiplier, currency);
         }
 
+        public Money Plus(Money addend)
+        {
+            return new Money(amount + addend.amount, currency);
+        }
+
         public override bool Equals(object obj)
         {
             var money = (Money)obj;
