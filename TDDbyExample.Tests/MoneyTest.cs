@@ -33,8 +33,6 @@ namespace TDDbyExample.Tests
             {
                 Assert.True(Money.Dollar(5).Equals(Money.Dollar(5)));
                 Assert.False(Money.Dollar(5).Equals(Money.Dollar(6)));
-                Assert.True(Money.Franc(5).Equals(Money.Franc(5)));
-                Assert.False(Money.Franc(5).Equals(Money.Franc(6)));
                 Assert.False(Money.Franc(5).Equals(Money.Dollar(5)));
             });
         }
@@ -44,14 +42,6 @@ namespace TDDbyExample.Tests
         {
             Assert.That(Money.Dollar(1).Currency, Is.EqualTo("USD"));
             Assert.That(Money.Franc(1).Currency, Is.EqualTo("CHF"));
-        }
-
-        [Test]
-        public void 型が違っても通貨が同じ場合は比較できる()
-        {
-            var l = new Money(10, "CHF");
-            var r = new Franc(10, "CHF");
-            Assert.True(l.Equals(r));
         }
     }
 }
