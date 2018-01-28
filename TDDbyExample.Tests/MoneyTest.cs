@@ -19,6 +19,13 @@ namespace TDDbyExample.Tests
         }
 
         [Test]
+        public void 足し算できる()
+        {
+            var sum = Money.Dollar(5).Plus(Money.Dollar(5));
+            Assert.That(sum, Is.EqualTo(Money.Dollar(10)));
+        }
+
+        [Test]
         public void 比較できる()
         {
             Assert.Multiple(() =>
