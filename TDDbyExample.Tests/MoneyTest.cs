@@ -48,6 +48,14 @@ namespace TDDbyExample.Tests
         }
 
         [Test]
+        public void Moneyを単純な形に変形できる()
+        {
+            var bank = new Bank();
+            var result = bank.Reduce(Money.Dollar(1), "USD");
+            Assert.That(result, Is.EqualTo(Money.Dollar(1)));
+        }
+
+        [Test]
         public void 比較できる()
         {
             Assert.Multiple(() =>
