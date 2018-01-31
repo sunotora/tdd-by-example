@@ -6,7 +6,9 @@ namespace TDDbyExample
     {
         public Money Reduce(Expression source, string to)
         {
-            return Money.Dollar(10);
+            var sum = (Sum)source;
+            var amount = sum.Augend.Amount + sum.Addend.Amount;
+            return new Money(amount, to);
         }
     }
 }

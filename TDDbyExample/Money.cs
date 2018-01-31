@@ -4,16 +4,17 @@ namespace TDDbyExample
 {
     public class Money : Expression
     {
-        protected int amount;
-        protected string currency;
+        int amount;
+        string currency;
+
+        public int Amount => amount;
+        public string Currency => currency;
 
         public Money (int amount, string currency)
         {
             this.amount = amount;
             this.currency = currency;
         }
-
-        public string Currency => currency;
 
         public Money Times(int multiplier)
         {
