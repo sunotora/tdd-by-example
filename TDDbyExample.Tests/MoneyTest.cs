@@ -29,6 +29,16 @@ namespace TDDbyExample.Tests
         }
 
         [Test]
+        public void PlusメソッドがSumクラスを返す()
+        {
+            var five = Money.Dollar(5);
+            var result = five.Plus(five);
+            Sum sum = (Sum)result;
+            Assert.That(sum.Augend, Is.EqualTo(five));
+            Assert.That(sum.Addend, Is.EqualTo(five));
+        }
+
+        [Test]
         public void 比較できる()
         {
             Assert.Multiple(() =>
