@@ -81,11 +81,5 @@ namespace TDDbyExample.Tests
             Assert.That(Money.Dollar(1).Currency, Is.EqualTo("USD"));
             Assert.That(Money.Franc(1).Currency, Is.EqualTo("CHF"));
         }
-
-        [Test]
-        public void 配列を比較できる()
-        {
-            Assert.True(new Object[] { "abc" } == new Object[] { "abc" });
-        }
     }
 }
