@@ -33,9 +33,18 @@ namespace TDDbyExample.Tests
         {
             var five = Money.Dollar(5);
             var result = five.Plus(five);
-            Sum sum = (Sum)result;
+            var sum = (Sum)result;
             Assert.That(sum.Augend, Is.EqualTo(five));
             Assert.That(sum.Addend, Is.EqualTo(five));
+        }
+
+        [Test]
+        public void Sumを単純な形に変形できる()
+        {
+            var sum = new Sum(Money.Dollar(3), Money.Dollar(4));
+            var bank = new Bank();
+            var result = bank.Reduce(sum, "USD");
+            Assert.That(result, Is.EqualTo(Money.Dollar(7)));
         }
 
         [Test]
