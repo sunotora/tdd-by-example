@@ -18,6 +18,7 @@ namespace TDDbyExample
 
         public int Rate(string from, string to)
         {
+            if (from == to) return 1;
             return rates[new Pair(from, to)];
         }
     }
