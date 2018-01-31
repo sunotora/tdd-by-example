@@ -18,7 +18,8 @@ namespace TDDbyExample
 
         public Money Reduce(string to)
         {
-            return this;
+            int rate = ((currency == "CHF") && to == "USD") ? 2 : 1;
+            return new Money(amount / rate, to);
         }
 
         public Money Times(int multiplier)
