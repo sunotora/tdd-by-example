@@ -64,6 +64,14 @@ namespace TDDbyExample.Tests
             Assert.That(result, Is.EqualTo(Money.Dollar(1)));
         }
 
+        [TestCase("USD")]
+        [TestCase("CHF")]
+        public void 同じ通貨を単純な形に変形する場合レートが1になる(string currency)
+        {
+            var bank = new Bank();
+            Assert.That(bank.Rate(currency, currency), Is.EqualTo(1));
+        }
+
         [Test]
         public void 比較できる()
         {
