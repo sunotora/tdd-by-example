@@ -16,6 +16,11 @@ namespace TDDbyExample
             this.currency = currency;
         }
 
+        public Money Reduce(string to)
+        {
+            return this;
+        }
+
         public Money Times(int multiplier)
         {
             return new Money(amount * multiplier, currency);

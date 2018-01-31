@@ -7,7 +7,7 @@ namespace TDDbyExample
         public Money Reduce(Expression source, string to)
         {
             var money = source as Money;
-            if (money != null) return money;
+            if (money != null) return money.Reduce(to);
             var sum = (Sum)source;
             return sum.Reduce(to);
         }
