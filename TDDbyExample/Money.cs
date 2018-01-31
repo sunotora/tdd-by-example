@@ -18,7 +18,7 @@ namespace TDDbyExample
 
         public Money Reduce(Bank bank, string to)
         {
-            int rate = ((currency == "CHF") && to == "USD") ? 2 : 1;
+            var rate = bank.Rate(currency, to);
             return new Money(amount / rate, to);
         }
 
