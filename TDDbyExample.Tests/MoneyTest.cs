@@ -56,6 +56,15 @@ namespace TDDbyExample.Tests
         }
 
         [Test]
+        public void 異なる通貨を単純な形に変形できる()
+        {
+            var bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            var result = bank.Reduce(Money.Franc(2), "USD");
+            Assert.That(result, Is.EqualTo(Money.Dollar(1)));
+        }
+
+        [Test]
         public void 比較できる()
         {
             Assert.Multiple(() =>
