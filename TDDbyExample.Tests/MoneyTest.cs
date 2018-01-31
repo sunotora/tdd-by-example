@@ -24,7 +24,7 @@ namespace TDDbyExample.Tests
             var five = Money.Dollar(5);
             Expression sum = five.Plus(five);
             Bank bank = new Bank();
-            Money reduced = bank.reduce(sum, "USD");
+            Money reduced = bank.Reduce(sum, "USD");
             Assert.That(reduced, Is.EqualTo(Money.Dollar(10)));
         }
 
