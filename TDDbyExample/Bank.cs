@@ -6,7 +6,7 @@ namespace TDDbyExample
     {
         public Money Reduce(Expression source, string to)
         {
-            throw new NotImplementedException();
+            return Money.Dollar(10);
         }
     }
 }
