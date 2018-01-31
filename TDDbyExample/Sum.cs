@@ -10,6 +10,12 @@ namespace TDDbyExample
             Addend = addend;
         }
 
+        public Money Reduce(string to)
+        {
+            var amount = Augend.Amount + Addend.Amount;
+            return new Money(amount, to);
+        }
+
         public Money Augend { get; }
         public Money Addend { get; }
     }
