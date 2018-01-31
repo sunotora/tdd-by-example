@@ -22,9 +22,9 @@ namespace TDDbyExample.Tests
         public void 足し算できる()
         {
             var five = Money.Dollar(5);
-            Expression sum = five.Plus(five);
-            Bank bank = new Bank();
-            Money reduced = bank.Reduce(sum, "USD");
+            var sum = five.Plus(five);
+            var bank = new Bank();
+            var reduced = bank.Reduce(sum, "USD");
             Assert.That(reduced, Is.EqualTo(Money.Dollar(10)));
         }
 
