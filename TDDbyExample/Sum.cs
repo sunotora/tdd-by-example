@@ -7,7 +7,7 @@ namespace TDDbyExample
         public Expression Augend { get; }
         public Expression Addend { get; }
 
-        public Sum(Money augend, Money addend)
+        public Sum(Expression augend, Expression addend)
         {
             Augend = augend;
             Addend = addend;
