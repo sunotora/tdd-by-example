@@ -4,6 +4,9 @@ namespace TDDbyExample
 {
     public class Sum : Expression
     {
+        public Expression Augend { get; }
+        public Expression Addend { get; }
+
         public Sum(Money augend, Money addend)
         {
             Augend = augend;
@@ -15,8 +18,5 @@ namespace TDDbyExample
             var amount = Augend.Reduce(bank, to).Amount + Addend.Reduce(bank, to).Amount;
             return new Money(amount, to);
         }
-
-        public Money Augend { get; }
-        public Money Addend { get; }
     }
 }
