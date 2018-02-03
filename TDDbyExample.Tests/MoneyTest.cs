@@ -108,13 +108,6 @@ namespace TDDbyExample.Tests
         }
 
         [Test]
-        public void 同じ通貨で足し算するとMoneyが返ってくる()
-        {
-            var sum = Money.Dollar(1).Plus(Money.Dollar(1));
-            Assert.That(sum.GetType(), Is.EqualTo(typeof(Money)));
-        }
-
-        [Test]
         public void 比較できる()
         {
             Assert.Multiple(() =>
