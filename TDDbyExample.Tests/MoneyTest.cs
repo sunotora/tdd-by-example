@@ -73,6 +73,17 @@ namespace TDDbyExample.Tests
         }
 
         [Test]
+        public void 異なる通貨で足し算できる()
+        {
+            var fiveBuck = Money.Dollar(5);
+            var tenFrancs = Money.Franc(10);
+            var bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            var result = bank.Reduce(fiveBuck.Plus(tenFrancs), "USD");
+            Assert.That(result, Is.EqualTo(Money.Dollar(10)));
+        }
+
+        [Test]
         public void 比較できる()
         {
             Assert.Multiple(() =>
