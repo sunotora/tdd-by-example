@@ -13,6 +13,11 @@ namespace TDDbyExample
             Addend = addend;
         }
 
+        public Expression Plus(Expression addend)
+        {
+            throw new NotImplementedException();
+        }
+
         public Money Reduce(Bank bank,string to)
         {
             var amount = Augend.Reduce(bank, to).Amount + Addend.Reduce(bank, to).Amount;
