@@ -22,12 +22,12 @@ namespace TDDbyExample
             return new Money(amount / rate, to);
         }
 
-        public Money Times(int multiplier)
+        public Expression Times(int multiplier)
         {
             return new Money(amount * multiplier, currency);
         }
 
-        public Expression Plus(Money addend)
+        public Expression Plus(Expression addend)
         {
             return new Sum(this, addend);
         }
