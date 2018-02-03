@@ -96,6 +96,18 @@ namespace TDDbyExample.Tests
         }
 
         [Test]
+        public void Sumクラスで掛け算できる()
+        {
+            var fiveBuck = Money.Dollar(5);
+            var tenFrancs = Money.Franc(10);
+            var bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            var sum = new Sum(fiveBuck, tenFrancs).Times(2);
+            var result = bank.Reduce(sum, "USD");
+            Assert.That(result, Is.EqualTo(Money.Dollar(20)));
+        }
+
+        [Test]
         public void 比較できる()
         {
             Assert.Multiple(() =>
